@@ -29,7 +29,8 @@ function knightMoves(startPoint, endPoint){
      const [currentPosition, pathSoFar] = queue.shift(); // Dequeue the first element
 
      if(currentPosition[0] === endPoint[0] && currentPosition[1] === endPoint[1]){
-        return pathSoFar
+        
+        return `You made it in ${pathSoFar.length - 1}! Here's your path: ${pathSoFar}`
      }
      const neighbours = getMoves(currentPosition);
 
@@ -44,6 +45,6 @@ function knightMoves(startPoint, endPoint){
   }
 }
 
-// Test getMoves() alone
-// Test BFS without path
+// Test getMoves() alone ✅
+// Test BFS without path ✅
 // Then add path tracking
